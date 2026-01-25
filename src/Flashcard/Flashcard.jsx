@@ -3,56 +3,54 @@ import Header from "../components/Header";
 import { mockData } from "../../data/mock-data";
 
 export default function Flashcard() {
-    console.log(mockData.flashcards);
+	function chuyenTuTiepTheo() {
+		console.log("chuyen tu tiep");
+	}
 
-    function chuyenTuTiepTheo() {
-        console.log("chuyen tu tiep ");
-    }
+	return (
+		<div className="min-h-screen flex flex-col">
+			<Header />
 
-    return (
-        <div>
-            <Header />
-            <div className="flex flex-col mt-2 items-center justify-center">
-                <h2 className="flex items-center justify-center mb-5 font-bold text-xl">
-                    Từ vựng Tiếng Anh giao tiếp cơ bản
-                </h2>
-                <div className="flex items-center mt-50 border flex-col justify-center">
-                    <div className="bg-black/50 ">
-                        <div>
-                            {mockData.flashcards.map((flashcard) => (
-                                <div>
-                                    {true ?
-                                        <div className="bg-green-300 px-22 py-2 mx-40 my-30">
-                                            <div className="py-22 px-30 -my-3">
-                                                <p>{flashcard.word}</p>
-                                                <p>{flashcard.type}</p>
-                                                <p>{flashcard.definition}</p>
-                                                <p>{flashcard.example}</p>
-                                                <p>{flashcard.phonetic}</p>
-                                            </div>
-                                        </div>
-                                        :
-                                        <div>lat the</div>
-                                    }
-                                </div>
-                            ))}
+			<main className="flex-1 flex flex-col items-center justify-center gap-6">
+				<h2 className="font-bold text-2xl">
+					Từ vựng Tiếng Anh giao tiếp cơ bản
+				</h2>
 
-                            <div className="flex justify-between mx-50 mb-4 mt-20">
-                                <button
-                                    onClick={chuyenTuTiepTheo}
-                                    className="bg-blue-400 border rounded-full py1 px-2"
-                                >
-                                    Quay lai
-                                </button>
-                                <button className="bg-blue-400 border rounded-full py-1 px-2">
-                                    Tu khac
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* <Footer /> */}
-        </div>
-    );
+				{mockData.flashcards.map((flashcard, index) => (
+					<div
+						key={index}
+						className="card w-96 bg-base-100 shadow-xl"
+					>
+						<div className="card-body items-center text-center">
+							<h3 className="card-title text-green-600">
+								{flashcard.word}
+							</h3>
+							<p className="italic">{flashcard.phonetic}</p>
+							<p className="badge badge-outline">
+								{flashcard.type}
+							</p>
+							<p>{flashcard.definition}</p>
+							<p className="text-sm text-gray-500">
+								{flashcard.example}
+							</p>
+
+							<div className="card-actions mt-4 flex gap-4">
+								<button
+									onClick={chuyenTuTiepTheo}
+									className="btn btn-outline"
+								>
+									Quay lại
+								</button>
+								<button className="btn btn-primary">
+									Từ khác
+								</button>
+							</div>
+						</div>
+					</div>
+				))}
+			</main>
+
+			<Footer />
+		</div>
+	);
 }

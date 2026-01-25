@@ -1,63 +1,81 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 export default function Dangnhap() {
 	return (
-		<div className="min-h-screen flex items-start justify-center pt-15 bg-gradient-to-r from-blue-100 to-white">
-			<div className="bg-white rounded-2xl shadow-md p-8 flex gap-12 w-[640px] border border-gray-200">
-				<div className="flex-1 flex items-center justify-center">
-					<img
-						src="/logo.png"
-						alt="logo"
-						className="w-40 h-40 object-contain"
-					/>
-				</div>
+		<div className="min-h-screen flex flex-col">
+			<Header />
 
-				<div className="flex-1 flex flex-col justify-center">
-					<h2 className="text-3xl font-semibold mb-8 text-gray-800 text-center">
-						Đăng nhập
-					</h2>
-					<div className="space-y-6">
-						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Tài khoản
-							</label>
-							<input
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100"
-								placeholder="Nhập tài khoản"
-							/>
-						</div>
-						<div className="relative">
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Mật khẩu
-							</label>
-							<input
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100 pr-10"
-								placeholder="Nhập mật khẩu"
+			<main className="flex-1 flex items-start justify-center pt-16 bg-gradient-to-r from-blue-100 to-white">
+				<div className="card w-[640px] bg-base-100 shadow-xl border border-base-200">
+					<div className="card-body flex-row gap-12">
+						{/* LOGO */}
+						<div className="flex-1 flex items-center justify-center">
+							<img
+								src="/logo.png"
+								alt="logo"
+								className="w-40 h-40 object-contain"
 							/>
 						</div>
 
-						<button
-							type="button"
-							className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mx-auto block"
-						>
-							Đăng nhập
-						</button>
-					</div>
+						{/* FORM */}
+						<div className="flex-1">
+							<h2 className="text-3xl font-semibold text-center mb-8">
+								Đăng nhập
+							</h2>
 
-					<div className="mt-6 flex items-center justify-between text-sm text-gray-600">
-						<a
-							href="Dangky"
-							className="hover:text-blue-600"
-						>
-							Đăng ký tài khoản
-						</a>
-						<a
-							href="Quenmatkhau"
-							className="hover:text-blue-600"
-						>
-							Quên mật khẩu?
-						</a>
+							<div className="space-y-5">
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Tài khoản
+										</span>
+									</label>
+									<input
+										type="text"
+										placeholder="Nhập tài khoản"
+										className="input input-bordered w-full"
+									/>
+								</div>
+
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Mật khẩu
+										</span>
+									</label>
+									<input
+										type="password"
+										placeholder="Nhập mật khẩu"
+										className="input input-bordered w-full"
+									/>
+								</div>
+
+								<button className="btn btn-primary w-full mt-2">
+									Đăng nhập
+								</button>
+							</div>
+
+							<div className="mt-6 flex justify-between text-sm">
+								<a
+									href="Dangky"
+									className="link link-hover"
+								>
+									Đăng ký tài khoản
+								</a>
+								<a
+									href="Quenmatkhau"
+									className="link link-hover"
+								>
+									Quên mật khẩu?
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</main>
+
+			<Footer />
 		</div>
 	);
 }
