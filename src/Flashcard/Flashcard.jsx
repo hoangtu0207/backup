@@ -3,11 +3,9 @@ import Header from "../components/Header";
 import { mockData } from "../../data/mock-data";
 
 export default function Flashcard() {
-    console.log(mockData.flashcards);
-
-    function chuyenTuTiepTheo() {
-        console.log("chuyen tu tiep ");
-    }
+	function chuyenTuTiepTheo() {
+		console.log("chuyen tu tiep");
+	}
 
     return (
         <div>
@@ -52,7 +50,7 @@ export default function Flashcard() {
                     </div>
                 </div>
             </div>
-           <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

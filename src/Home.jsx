@@ -4,17 +4,15 @@ import IndexLogin from "./Home/IndexLogin";
 import IndexUnLogin from "./Home/IndexUnLogin";
 
 export default function Home() {
-    return (
-        <div>
-            <header>
-                <Header />
-            </header>
-            <div>
-                {true ? <IndexLogin /> : <IndexUnLogin />}
-            </div>
-            <footer>
-                <Footer />
-            </footer>
-        </div>
-    );
+	return (
+		<div className="min-h-screen flex flex-col">
+			<header>
+				<Header />
+			</header>
+			<div className="flex-1">
+				{true ? <IndexLogin /> : <IndexUnLogin />}
+			</div>
+			<Footer />
+		</div>
+	);
 }
