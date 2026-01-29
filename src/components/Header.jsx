@@ -6,7 +6,7 @@ export default function Header() {
 
       <div className="flex items-center space-x-2">
         <div className="flex items-center justify-center bg-white">
-          <Link to="/IndexLogin">
+          <Link to="/">
             <img
               src="../public/logo.png"
               alt="LingGo Logo"
@@ -16,15 +16,15 @@ export default function Header() {
       </div>
 
       <nav class="flex items-center space-x-6">
-        <Link className="hover:text-gray-800" to="/Dethi">Đề thi online</Link>
-        <Link className="hover:text-gray-800" to="/Chonthe">Flashcards</Link>
-        <Link className="hover:text-gray-600" to="/">Đăng xuất</Link>
+        <Link className="hover:text-blue-600" to="/Chondethi">Đề thi online</Link>
+        <Link className="hover:text-blue-600" to="/Chonthe">Flashcards</Link>
+        <Link className="hover:text-blue-600" to="/">Đăng xuất</Link>
 
         <>
-          <Link to="/Dangnhap" className="btn btn-sm btn-neutral">
+          <Link to="/Dangnhap" className="hover:text-blue-600">
             Đăng nhập
           </Link>
-          <Link to="/Dangky" className="btn btn-sm btn-neutral">Đăng ký</Link>
+          <Link to="/Dangky" className="hover:text-blue-600">Đăng ký</Link>
         </>
       </nav>
     </div>

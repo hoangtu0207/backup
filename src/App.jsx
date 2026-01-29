@@ -12,17 +12,21 @@ import Chondethi from "./Exams/Chondethi";
 import Lamde from "./Exams/Lamde";
 import Dashboard from "./admin/Dashboard";
 import Qlydethi from "./admin/Qlydethi";
+import Qlycauhoi from "./admin/Qlycauhoi";
+import Qlyflashcards from "./admin/Qlyflashcards";
+import Qlynguoidung from "./admin/Qlynguoidung";
+import Trangcanhan from "./Auth/Trangcanhan";
 
 
 function App() {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/trangchu "
         element={<Home />}
       />
       <Route
-        path="/index"
+        path="/"
         element={<IndexUnLogin />}
       />
       <Route
@@ -69,6 +73,22 @@ function App() {
       <Route
         path="/quanlydethi"
         element={<Qlydethi />}
+      />
+      <Route
+        path="/quanlycauhoi"
+        element={<Qlycauhoi />}
+      />
+      <Route
+        path="/quanlyflashcards"
+        element={<Qlyflashcards />}
+      />
+      <Route
+        path="/quanlynguoidung"
+        element={<Qlynguoidung />}
+      />
+      <Route
+        path="/profile"
+        element={<Trangcanhan />}
       />
     </Routes>
   );

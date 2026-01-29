@@ -52,7 +52,7 @@ export default function Flashcard() {
                     </div>
                 </div>
             </div>
-            {/* <Footer /> */}
+           <Footer />
         </div>
     );
 }

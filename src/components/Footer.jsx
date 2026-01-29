@@ -19,7 +19,7 @@ export default function Footer() {
 				</a>{" "}
 				-{" "}
 				<a
-					href="lienhe"
+					href="Lienhe"
 					class="text-blue-500 hover:underline"
 				>
 					Liên hệ
