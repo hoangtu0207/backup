@@ -9,8 +9,8 @@ export default function IndexUnLogin() {
 				<ul className="text-lg space-y-4 mb-12">
 					<li>Kho đề thi phong phú: IELTS, TOEIC, HKS, ...</li>
 					<li>
-						Giao diện đơn giản, dễ thao tác, phù hợp cho việc
-						học từ vựng.
+						Giao diện đơn giản, dễ thao tác, phù hợp cho việc học từ
+						vựng.
 					</li>
 					<li>Nội dung đa dạng, từ cơ bản đến nâng cao.</li>
 				</ul>
