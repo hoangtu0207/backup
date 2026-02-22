@@ -1,11 +1,9 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import Footer from "../../components/Footer";
+import Sidebar from "../../components/Sidebar";
 
 export default function AdminDashboard() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <div className="flex">
         <Sidebar />
         <div className="drawer drawer-open min-h-screen">

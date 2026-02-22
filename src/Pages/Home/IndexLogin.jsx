@@ -1,4 +1,4 @@
-import { mockData } from "../../data/mock-data";
+import { mockData } from "../../../data/mock-data";
 
 export default function IndexLogin() {
 	return (

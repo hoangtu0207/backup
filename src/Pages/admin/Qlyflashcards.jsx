@@ -1,13 +1,9 @@
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Sidebar from "../../components/Sidebar";
+import Footer from "../../components/Footer";
 
 export default function FlashcardManager() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* HEADER */}
-      <Header />
-
       {/* MAIN */}
       <div className="flex flex-1">
         {/* SIDEBAR */}

@@ -1,94 +1,96 @@
 import { Route, Routes } from "react-router-dom";
-import Dangky from "./Auth/Dangky";
-import Dangnhap from "./Auth/Dangnhap";
-import Quenmatkhau from "./Auth/Quenmatkhau";
-import Chonthe from "./Flashcard/Chonthe";
-import Flashcard from "./Flashcard/Flashcard";
-import Gioithieu from "./Gioithieu";
-import Home from "./Home";
-import IndexUnLogin from "./Home/IndexUnLogin";
-import Lienhe from "./Lienhe";
-import Chondethi from "./Exams/Chondethi";
-import Lamde from "./Exams/Lamde";
-import Dashboard from "./admin/Dashboard";
-import Qlydethi from "./admin/Qlydethi";
-import Qlycauhoi from "./admin/Qlycauhoi";
-import Qlyflashcards from "./admin/Qlyflashcards";
-import Qlynguoidung from "./admin/Qlynguoidung";
-import Trangcanhan from "./Auth/Trangcanhan";
+import Dangky from "./Pages/Auth/Dangky";
+import Dangnhap from "./Pages/Auth/Dangnhap";
+import Quenmatkhau from "./Pages/Auth/Quenmatkhau";
+import Chonthe from "./Pages/Flashcard/Chonthe";
+import Flashcard from "./Pages/Flashcard/Flashcard";
+import Gioithieu from "./Pages/Gioithieu";
+import Home from "./Pages/Home";
+import IndexUnLogin from "./Pages/Home/IndexUnLogin";
+import Lienhe from "./Pages/Lienhe";
+import Chondethi from "./Pages/Exams/Chondethi";
+import Lamde from "./Pages/Exams/Lamde";
+import Dashboard from "./Pages/admin/Dashboard";
+import Qlydethi from "./Pages/admin/Qlydethi";
+import Qlycauhoi from "./Pages/admin/Qlycauhoi";
+import Qlyflashcards from "./Pages/admin/Qlyflashcards";
+import Qlynguoidung from "./Pages/admin/Qlynguoidung";
+import Trangcanhan from "./Pages/Auth/Trangcanhan";
+import AppLayout from "./layouts/AppLayout";
+import AuthLayout from "./layouts/AuthLayout";
 
 
 function App() {
   return (
     <Routes>
       <Route
-        path="/trangchu "
-        element={<Home />}
+        path="/trangchu"
+        element={<AppLayout><Home /></AppLayout>}
       />
       <Route
         path="/"
-        element={<IndexUnLogin />}
+        element={<AppLayout><IndexUnLogin /></AppLayout>}
       />
       <Route
         path="/chonthe"
-        element={<Chonthe />}
+        element={<AppLayout><Chonthe /></AppLayout>}
       />
 
       <Route
         path="/flashcard"
-        element={<Flashcard />}
+        element={<AppLayout><Flashcard /></AppLayout>}
       />
       <Route
         path="/dangnhap"
-        element={<Dangnhap />}
+        element={<AuthLayout><Dangnhap /></AuthLayout>}
       />
       <Route
         path="/dangky"
-        element={<Dangky />}
+        element={<AuthLayout><Dangky /></AuthLayout>}
       />
       <Route
         path="/quenmatkhau"
-        element={<Quenmatkhau />}
+        element={<AuthLayout><Quenmatkhau /></AuthLayout>}
       />
       <Route
         path="/lienhe"
-        element={<Lienhe />}
+        element={<AppLayout><Lienhe /></AppLayout>}
       />
       <Route
         path="/gioithieu"
-        element={<Gioithieu />}
+        element={<AppLayout><Gioithieu /></AppLayout>}
       />
       <Route
         path="/chondethi"
-        element={<Chondethi />}
+        element={<AppLayout><Chondethi /></AppLayout>}
       />
       <Route
         path="/lamde"
-        element={<Lamde />}
+        element={<AppLayout><Lamde /></AppLayout>}
       />
       <Route
         path="/dashboard"
-        element={<Dashboard />}
+        element={<AppLayout><Dashboard /></AppLayout>}
       />
       <Route
         path="/quanlydethi"
-        element={<Qlydethi />}
+        element={<AppLayout><Qlydethi /></AppLayout>}
       />
       <Route
         path="/quanlycauhoi"
-        element={<Qlycauhoi />}
+        element={<AppLayout><Qlycauhoi /></AppLayout>}
       />
       <Route
         path="/quanlyflashcards"
-        element={<Qlyflashcards />}
+        element={<AppLayout><Qlyflashcards /></AppLayout>}
       />
       <Route
         path="/quanlynguoidung"
-        element={<Qlynguoidung />}
+        element={<AppLayout><Qlynguoidung /></AppLayout>}
       />
       <Route
         path="/profile"
-        element={<Trangcanhan />}
+        element={<AppLayout><Trangcanhan /></AppLayout>}
       />
     </Routes>
   );
