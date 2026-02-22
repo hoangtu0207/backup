@@ -1,36 +1,49 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import dethi from "../data/chondethi";
 
 export default function Chondethi() {
 	return (
-		<div className="flex flex-col min-h-screen">
+		<div className="min-h-screen flex flex-col bg-base-200">
 			<Header />
-			<section className="bg-blue-200 text-center py-6">
-				<h2 className="text-2xl font-semibold flex items-center justify-center gap-2">
-					<span className="material-icons text-gray-700">
-						Thư viện đề thi
-					</span>
-				</h2>
-				<p className="text-gray-600">Lựa chọn đề thi để luyện tập</p>
+
+			{/* HEADER SECTION */}
+			<section className="hero bg-blue-200 text-slate-800 py-8">
+				<div className="hero-content text-center">
+					<div>
+						<h2 className="text-3xl font-bold">Thư viện đề thi</h2>
+						<p className="mt-2 text-base">
+							Lựa chọn đề thi để luyện tập
+						</p>
+					</div>
+				</div>
 			</section>
 
-			<main className="flex-1 flex justify-center items-start mt-10">
-				<div className="flex flex-wrap justify-center gap-10">
-					<div className="w-64 h-64 bg-gray-100 rounded-2xl flex flex-col justify-between items-center p-6 shadow-sm hover:shadow-lg hover:bg-blue-100 hover:text-gray-800 transition transform hover:-translate-y-1">
-						<button className="border rounded-full px-4 text-lg hover:bg-blue-400 hover:text-white">
-							Chi tiết
-						</button>
-					</div>
-					<div className="w-64 h-64 bg-gray-100 rounded-2xl flex flex-col justify-between items-center p-6 shadow-sm hover:shadow-lg hover:bg-blue-100 hover:text-gray-800 transition transform hover:-translate-y-1">
-						<button className="border rounded-full px-4 text-lg hover:bg-blue-400 hover:text-white">
-							Chi tiết
-						</button>
-					</div>
-					<div className="w-64 h-64 bg-gray-100 rounded-2xl flex flex-col justify-between items-center p-6 shadow-sm hover:shadow-lg hover:bg-blue-100 hover:text-gray-800 transition transform hover:-translate-y-1">
-						<button className="border rounded-full px-4 text-lg hover:bg-blue-400 hover:text-white">
-							Chi tiết
-						</button>
-					</div>
+			{/* MAIN */}
+			<main className="flex-1 container mx-auto px-6 py-10">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+					{dethi.map((item) => (
+						<div
+							key={item.id}
+							className="card bg-base-100 shadow-xl hover:shadow-2xl transition"
+						>
+							<div className="card-body items-center text-center">
+								<h3 className="card-title">{item.kythi}</h3>
+
+								<p>Môn: {item.tenmonthi}</p>
+
+								<p className="text-sm text-gray-500">
+									{item.socauhoi} câu hỏi
+								</p>
+
+								<div className="card-actions">
+									<button className="btn btn-primary bg-blue-300 text-slate-800">
+										Chi tiết
+									</button>
+								</div>
+							</div>
+						</div>
+					))}
 				</div>
 			</main>
 

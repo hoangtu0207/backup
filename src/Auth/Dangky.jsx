@@ -1,99 +1,99 @@
 export default function Dangky() {
 	return (
-		<div className="min-h-screen flex items-start justify-center pt-12 bg-gradient-to-r from-blue-100 to-white">
-			<div className="bg-white rounded-2xl shadow-md p-8 flex gap-12 w-2xl border border-gray-200">
-				<div className="flex-1 flex items-center justify-center">
-					<img
-						src="/logo.png"
-						alt="logo"
-						className="w-40 h-40 object-contain"
-					/>
-				</div>
-
-				<div className="flex-1 flex flex-col justify-center">
-					<h2 className="text-3xl font-semibold mb-8 text-gray-800 text-center">
-						Đăng ký
-					</h2>
-
-					<div className="space-y-4">
-						{/* Tài khoản */}
-						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Họ và tên
-							</label>
-							<input
-								type="text"
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100"
-								placeholder="Nhập họ và tên"
+		<div className="min-h-screen flex flex-col">
+			<main className="flex-1 flex items-start justify-center pt-16 bg-gradient-to-r from-blue-100 to-white">
+				<div className="card w-[640px] bg-base-100 shadow-xl border border-base-200">
+					<div className="card-body flex-row gap-12">
+						{/* LOGO */}
+						<div className="flex-1 flex items-center justify-center">
+							<img
+								src="/logo.png"
+								alt="logo"
+								className="w-40 h-40 object-contain"
 							/>
 						</div>
 
-						{/* Email */}
-						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Tên đăng nhập hoặc Email
-							</label>
-							<input
-								type="email"
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100"
-								placeholder="Nhập email"
-							/>
-						</div>
+						{/* FORM */}
+						<div className="flex-1">
+							<h2 className="text-3xl font-semibold text-center mb-8">
+								Đăng ký
+							</h2>
 
-						<div className="relative">
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Mật khẩu
-							</label>
-							<input
-								type="text"
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100 pr-10"
-								placeholder="Nhập mật khẩu"
-							/>
-							<button
-								type="button"
-								onClick="#"
-								className="absolute right-3 top-8 text-gray-500 hover:text-gray-700"
-							></button>
-						</div>
+							<div className="space-y-5">
+								{/* Họ tên */}
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Họ và tên
+										</span>
+									</label>
+									<input
+										type="text"
+										placeholder="Nhập họ và tên"
+										className="input input-bordered w-full"
+									/>
+								</div>
 
-						{/* Xác nhận mật khẩu */}
-						<div className="relative">
-							<label className="block text-sm font-medium text-gray-700 mb-1">
-								Xác nhận mật khẩu
-							</label>
-							<input
-								type="text"
-								className="w-full px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 bg-gray-100 pr-10"
-								placeholder="Nhập lại mật khẩu"
-							/>
-							<button
-								type="button"
-								onClick="#"
-								className="absolute right-3 top-8 text-gray-500 hover:text-gray-700"
-							></button>
-						</div>
+								{/* Email */}
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Tên đăng nhập hoặc Email
+										</span>
+									</label>
+									<input
+										type="email"
+										placeholder="Nhập email"
+										className="input input-bordered w-full"
+									/>
+								</div>
 
-						{/* Nút đăng ký */}
-						<button
-							type="button"
-							onClick="#"
-							className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mx-auto block"
-						>
-							Đăng ký
-						</button>
+								{/* Mật khẩu */}
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Mật khẩu
+										</span>
+									</label>
+									<input
+										type="password"
+										placeholder="Nhập mật khẩu"
+										className="input input-bordered w-full"
+									/>
+								</div>
+
+								{/* Xác nhận mật khẩu */}
+								<div className="form-control">
+									<label className="label">
+										<span className="label-text">
+											Xác nhận mật khẩu
+										</span>
+									</label>
+									<input
+										type="password"
+										placeholder="Nhập lại mật khẩu"
+										className="input input-bordered w-full"
+									/>
+								</div>
+
+								<button className="btn btn-primary w-full mt-2">
+									Đăng ký
+								</button>
+							</div>
+
+							<div className="mt-6 text-center text-sm">
+								Đã có tài khoản?{" "}
+								<a
+									href="/Dangnhap"
+									className="link link-hover"
+								>
+									Đăng nhập ngay
+								</a>
+							</div>
+						</div>
 					</div>
-
-					<div className="mt-6 text-center text-sm text-gray-600">
-						Đã có tài khoản?{" "}
-						<a
-							href="/Dangnhap"
-							className="text-blue-600 hover:underline"
-						>
-							Đăng nhập ngay
-						</a>
-					</div>
 				</div>
-			</div>
+			</main>
 		</div>
 	);
 }

@@ -1,12 +1,7 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-
 export default function Dangnhap() {
 	return (
 		<div className="min-h-screen flex flex-col">
-			<Header />
-
-			<main className="flex-1 flex items-start justify-center pt-16 bg-gradient-to-r from-blue-100 to-white">
+			<main className="flex-1 flex items-center justify-center bg-gradient-to-r from-blue-100 to-white">
 				<div className="card w-[640px] bg-base-100 shadow-xl border border-base-200">
 					<div className="card-body flex-row gap-12">
 						{/* LOGO */}
@@ -27,7 +22,7 @@ export default function Dangnhap() {
 							<div className="space-y-5">
 								<div className="form-control">
 									<label className="label">
-										<span className="label-text">
+										<span className="label-text ">
 											Tài khoản
 										</span>
 									</label>
@@ -74,8 +69,6 @@ export default function Dangnhap() {
 					</div>
 				</div>
 			</main>
-
-			<Footer />
 		</div>
 	);
 }
